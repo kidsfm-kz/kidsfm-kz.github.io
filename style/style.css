@@ -16,28 +16,6 @@ img.welcome {
   //background: rgba(0, 0, 0, 1);
 }
 
-.cont {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
-}
-
-.cont > * {
-	height: 33.3vh;
-}
-
-h2 {
-  text-transform: uppercase;
-  margin-bottom: 1em;
-}
-
-h3 {
-  margin: 1em 0;
-}
-
 footer {
   text-align: center;
 }
@@ -53,7 +31,7 @@ footer {
 .link {
     text-decoration: none;
     box-sizing:border-box;
-    width: 10%;
+    width: 100%;
 }
 
 .item-1 {
@@ -65,7 +43,7 @@ footer {
 }
 
 .item-3 {
-    height:10vh;
+    height:100%;
 }
 @media screen and (max-width: 720px) {
   .box {
