@@ -1,27 +1,31 @@
 body {
-  background: fixed url("background.jpg") 0% 0%;
-  background-size: cover;
-  }
+    background: fixed url("background.jpg") 0% 0%;
+    background-size: cover;
+ }
 
 img.welcome {
-  width: 100%;
-  margin: 0 0 2em 0;
+    width: 100%;
+    margin: 0 0 2em 0;
 }
 
 .customimage img{
-  max-width: 100%;
+    max-width: 100%;
 }
 
 .box {
   //background: rgba(0, 0, 0, 1);
 }
 
+.link img {
+	width: 35%;
+}
+
 footer {
-  text-align: center;
+    text-align: center;
 }
 
 .links {
-	display: flex;
+    display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
@@ -45,6 +49,7 @@ footer {
 .item-3 {
     height:100%;
 }
+
 @media screen and (max-width: 720px) {
   .box {
     padding: 1em;
