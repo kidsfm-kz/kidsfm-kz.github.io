@@ -16,10 +16,6 @@ img.welcome {
 	width: 35%;
 }
 
-footer {
-    text-align: center;
-}
-
 .links {
     display: flex;
     flex-direction: row;
@@ -34,13 +30,7 @@ footer {
     width: 100%;
 }
 
-#page {
-      position: relative;
-}
-#page .pic-bottom {
-      position: absolute;
-      bottom: 0;
-}
+
 
 .item-1 {
     width: 90%;
