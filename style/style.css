@@ -45,7 +45,8 @@ input[type=range]  {
 }
 
 .link img {
-	width: 50%;
+	text-decoration: none;
+	width: 20%;
 }
 
 .cont {
