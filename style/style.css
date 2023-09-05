@@ -119,6 +119,17 @@ footer a:hover {
   border-color: #404041;
 }
 
+.links {
+	display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.link {
+    box-sizing: border-box;
+    width: 25%;
+}
 @media screen and (max-width: 720px) {
   .box {
     padding: 1em;
