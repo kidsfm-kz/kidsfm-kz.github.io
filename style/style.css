@@ -20,7 +20,6 @@ body {
 
 .container {
   max-width: 1000px;
-  padding: 0 1em;
   display: block;
   margin: 0 auto;
 }
@@ -40,12 +39,26 @@ input[type=range]  {
     }
 
 .box {
-  background: rgba(255, 255, 255, 0);
+  background: rgba(0, 0, 0, 1);
   color: #404041;
-  padding: 3em;
   border-radius: 5px;
-  margin-bottom: 2em;
-  margin-top: 2em;
+}
+
+.link img {
+	width: 50%;
+}
+
+.cont {
+	display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.cont > * {
+	height: 33.3vh;
 }
 
 h2 {
@@ -105,7 +118,6 @@ a {
 }
 
 footer {
-  margin-top: 2em;
   text-align: center;
 }
 
@@ -124,11 +136,24 @@ footer a:hover {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
 
 .link {
     box-sizing: border-box;
     width: 25%;
+}
+
+.item-1 {
+    height:100%;
+}
+
+.item-2 {
+    height:100%;
+}
+
+.item-3 {
+    height:10vh;
 }
 @media screen and (max-width: 720px) {
   .box {
