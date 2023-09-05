@@ -12,10 +12,6 @@ img.welcome {
     max-width: 100%;
 }
 
-.box {
-  //background: rgba(0, 0, 0, 1);
-}
-
 .link img {
 	width: 35%;
 }
@@ -36,6 +32,14 @@ footer {
     text-decoration: none;
     box-sizing:border-box;
     width: 100%;
+}
+
+#page {
+      position: relative;
+}
+#page .link{
+      position: absolute;
+      bottom: 0;
 }
 
 .item-1 {
