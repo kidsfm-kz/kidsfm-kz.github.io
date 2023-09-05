@@ -44,11 +44,6 @@ input[type=range]  {
   border-radius: 5px;
 }
 
-.link img {
-	text-decoration: none;
-	width: 20%;
-}
-
 .cont {
 	display: flex;
     flex-direction: column;
@@ -141,8 +136,9 @@ footer a:hover {
 }
 
 .link {
-    box-sizing: border-box;
-    width: 25%;
+    text-decoration: none;
+    box-sizing:border-box;
+    width: 10%;
 }
 
 .item-1 {
