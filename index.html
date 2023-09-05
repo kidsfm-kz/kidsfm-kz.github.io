@@ -26,8 +26,6 @@
 
 <script>
 const audio = new Audio('https://listen3.myradio24.com/73352');
-var playing = 0;
-var volumeAmount = 0;
 
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', function() {
@@ -42,15 +40,6 @@ if ('serviceWorker' in navigator) {
 }
 </script>
 
-<script>
-function ChangeVolume() {
-	volumeAmount = document.getElementById("Slider").value;
-	if (playing > 0) {
-	audio.volume = volumeAmount;
-	}
-}
-</script>
-
 <script src="https://use.fontawesome.com/4ca20d00e4.js"></script>
 <link rel="stylesheet" href="style/style.css">
 </head>
@@ -62,10 +51,8 @@ function ChangeVolume() {
         <div class="customimage">
 
 	<img src="title.png"><br><br>
-	<img id="image" src="buttonPlay.png" onClick="imgsrc();"><br><br><br>
+	<img id="image" src="buttonPlay.png" onClick="imgsrc();"><br><br><br><br><br>
 	
-	<img id="image" src="sound.png">
-	<input type="range" id = "Slider" min="0" max="1" value="0.5" step="any" onchange="ChangeVolume()"></input><br><br>
 	<a href="https://webcommunityukie.github.io/"><img src="whatsapp.png"></a>
 	<a href="https://instagram.com/kidsfm.kz?igshid=OGQ5ZDc2ODk2ZA=="><img src="instagram.png"></a>
 	<a href="https://www.tiktok.com/@kidsfm.kz?_t=8cdQVpzYgsf&_r=1"><img src="tiktok.png"></a>
@@ -80,8 +67,8 @@ function ChangeVolume() {
         function imgsrc() {
       		if(i==2){i=0;}
             	image.src=imgs[i];
-      		if (i==1) { audio.pause(); playing = 0;}
-    		else { audio.play(); audio.volume = volumeAmount; playing = 1;}
+      		if (i==1) { audio.pause();}
+    		else { audio.play();}
 		i++;
         	}
     	</script>
