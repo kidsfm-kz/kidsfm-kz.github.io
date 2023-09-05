@@ -69,7 +69,7 @@ function ChangeVolume() {
 	<a href="https://webcommunityukie.github.io/"><img src="whatsapp.png"></a>
 	<a href="https://instagram.com/kidsfm.kz?igshid=OGQ5ZDc2ODk2ZA=="><img src="instagram.png"></a>
 	<a href="https://www.tiktok.com/@kidsfm.kz?_t=8cdQVpzYgsf&_r=1"><img src="tiktok.png"></a>
-	<a href="https://youtube.com/@KIDS_FM"><img src="youtube.png"></a>
+	<a onClick="audio.volume = 0;"></a>
 	
 	</div>
 
@@ -80,7 +80,7 @@ function ChangeVolume() {
         function imgsrc() {
       		if(i==2){i=0;}
             	image.src=imgs[i];
-      		if (i==1) { audio.pause(); audio.volume = 0; playing = 0;}
+      		if (i==1) { audio.pause(); playing = 0;}
     		else { audio.play(); audio.volume = volumeAmount; playing = 1;}
 		i++;
         	}
