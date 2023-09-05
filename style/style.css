@@ -1,6 +1,7 @@
 body {
     background: fixed url("background.jpg") 0% 0%;
     background-size: cover;
+    touch-action: manipulation;
  }
 
 img.welcome {
