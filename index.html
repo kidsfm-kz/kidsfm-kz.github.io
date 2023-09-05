@@ -47,34 +47,32 @@ if ('serviceWorker' in navigator) {
 </head>
 
 <body>
-    <footer>
-        <div class="customimage">
-		<img class="item-1" src="title.png">
-		<img class="item-2" id="image" src="buttonPlay.png" onClick="imgsrc();">
-	<div class="links item-3">
-		<a class="link" href="https://api.whatsapp.com/send?phone="+"77778669899"><img src="whatsapp.png"></a>
-		<a class="link" href="https://instagram.com/kidsfm.kz?igshid=OGQ5ZDc2ODk2ZA=="><img src="instagram.png"></a>
-		<a class="link" href="https://www.tiktok.com/@kidsfm.kz?_t=8cdQVpzYgsf&_r=1"><img src="tiktok.png"></a>
-		<a class="link" href="https://youtube.com/@KIDS_FM"><img src="youtube.png"></a>
-	</div>
+	<div class="customimage">
+	<img class="item-1" src="title.png">
+	<img class="item-2" id="image" src="buttonPlay.png" onClick="imgsrc();">
 	</div>
 
-	<section id="page">
-        <img src="youtube.png" class="pic-bottom">
-	</section>
-
-        <script language="javascript">
-        var i=0;
-        var image=document.getElementById("image");
-        var imgs=new Array('buttonPause.png','buttonPlay.png');
-        function imgsrc() {
-      		if(i==2){i=0;}
-            	image.src=imgs[i];
-      		if (i==1) { audio.pause();}
-    		else { audio.play();}
+	<script language="javascript">
+	var i=0;
+	var image=document.getElementById("image");
+	var imgs=new Array('buttonPause.png','buttonPlay.png');
+	function imgsrc() {
+		if(i==2){i=0;}
+		image.src=imgs[i];
+		if (i==1) { audio.pause();}
+		else { audio.play();}
 		i++;
-        	}
-    	</script>
-    </footer>
+		}
+	</script>
 </body>
+
+<footer>
+	<div class="links item-3">
+	<a class="link" href="https://api.whatsapp.com/send?phone="+"77778669899"><img src="whatsapp.png"></a>
+	<a class="link" href="https://instagram.com/kidsfm.kz?igshid=OGQ5ZDc2ODk2ZA=="><img src="instagram.png"></a>
+	<a class="link" href="https://www.tiktok.com/@kidsfm.kz?_t=8cdQVpzYgsf&_r=1"><img src="tiktok.png"></a>
+	<a class="link" href="https://youtube.com/@KIDS_FM"><img src="youtube.png"></a>
+	</div>
+</footer>
+
 </html>
