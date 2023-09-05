@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width initial-scale=1">
+
+<link rel="apple-touch-icon" sizes="57x57" href="icons/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="icons/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="icons/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="icons/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="icons/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="icons/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="icons/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="icons/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="icons/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="icons/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="icons/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="msapplication-TileColor" content="#000000">
+<meta name="msapplication-TileImage" content="icons/ms-icon-144x144.png">
+<meta name="theme-color" content="#000000">
+
+<script src="https://cdn.jsdelivr.net/npm/@davland7/rplayer/dist/rplayer.min.js"></script>
+
+<script>
+const audio = new Audio('https://listen3.myradio24.com/73352');
+var playing = 0;
+var volumeAmount = 0.5;
+
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('/sw.js').then(function(registration) {
+      // Registration was successful
+      console.log('ServiceWorker registration successful with scope: ', registration.scope);
+    }, function(err) {
+      // registration failed :(
+      console.log('ServiceWorker registration failed: ', err);
+    });
+  });
+}
+</script>
+
+<script>
+function ChangeVolume() {
+	volumeAmount = document.getElementById("Slider").value;
+	if (playing > 0) {
+	audio.volume = volumeAmount;
+	}
+}
+</script>
+
+<script src="https://use.fontawesome.com/4ca20d00e4.js"></script>
+<link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="box">
+      <footer>
+        <div class="customimage">
+
+	<img src="title.png"><br><br>
+	<img id="image" src="buttonPlay.png" onClick="imgsrc();"><br><br><br><br>
+	
+	<img id="image" src="sound.png">
+	<input type="range" id = "Slider" min="0" max="1" value="0.5" step="any" onchange="ChangeVolume()"></input><br>
+	<a href="https://webcommunityukie.github.io/"><img src="whatsapp.png"></a>
+	<a href="https://instagram.com/kidsfm.kz?igshid=OGQ5ZDc2ODk2ZA=="><img src="instagram.png"></a>
+	<a href="https://www.tiktok.com/@kidsfm.kz?_t=8cdQVpzYgsf&_r=1"><img src="tiktok.png"></a>
+	<a href="https://youtube.com/@KIDS_FM"><img src="youtube.png"></a>
+	
+	</div>
+
+        <script language="javascript">
+        var i=0;
+        var image=document.getElementById("image");
+        var imgs=new Array('buttonPause.png','buttonPlay.png');
+        function imgsrc() {
+      		if(i==2){i=0;}
+            	image.src=imgs[i];
+      		if (i==1) { audio.stop(); audio.volume = 0; playing = 0;}
+    		else { audio.play(); audio.volume = volumeAmount; playing = 1;}
+		i++;
+        	}
+    	</script>
+     </footer>
+    </div>
+  </div>
+</body>
+
+</html>
