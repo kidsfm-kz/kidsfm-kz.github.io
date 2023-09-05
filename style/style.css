@@ -128,17 +128,17 @@ footer a:hover {
 }
 
 .links {
-	display: flex;
+    display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     width: 100%;
+    text-decoration: none;
 }
 
 .link {
-    text-decoration: none;
     box-sizing:border-box;
-    width: 20%;
+    width: 900px;
 }
 
 .item-1 {
