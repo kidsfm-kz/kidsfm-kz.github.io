@@ -37,7 +37,7 @@ footer {
 #page {
       position: relative;
 }
-#page .link{
+#page .pic-bottom {
       position: absolute;
       bottom: 0;
 }
